@@ -61,6 +61,13 @@
               {
                 "sourceTag": "domain:reminder",
                 "onlyDependOnLibsWithTags": ["domain:reminder", "domain:shared"]
+              },
+              {
+                "sourceTag": "domain:navigation",
+                "onlyDependOnLibsWithTags": [
+                  "domain:navigation",
+                  "domain:shared"
+                ]
               }
             ]
           }

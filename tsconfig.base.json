@@ -27,6 +27,12 @@
       "@webapplication-demo/calendar/feature-overview": [
         "libs/calendar/feature-overview/src/index.ts"
       ],
+      "@webapplication-demo/navigation/domain": [
+        "libs/navigation/domain/src/index.ts"
+      ],
+      "@webapplication-demo/navigation/feature-header": [
+        "libs/navigation/feature-header/src/index.ts"
+      ],
       "@webapplication-demo/reminder/domain": [
         "libs/reminder/domain/src/index.ts"
       ],

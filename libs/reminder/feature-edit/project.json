@@ -1,0 +1,20 @@
+{
+  "name": "reminder-feature-edit",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/reminder/feature-edit/src",
+  "prefix": "reminder",
+  "projectType": "library",
+  "tags": ["domain:reminder", "type:feature"],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/reminder/feature-edit/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

@@ -15,8 +15,42 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@webapplication-demo/calendar/domain": [
+        "libs/calendar/domain/src/index.ts"
+      ],
+      "@webapplication-demo/calendar/feature-create": [
+        "libs/calendar/feature-create/src/index.ts"
+      ],
+      "@webapplication-demo/calendar/feature-edit": [
+        "libs/calendar/feature-edit/src/index.ts"
+      ],
+      "@webapplication-demo/calendar/feature-overview": [
+        "libs/calendar/feature-overview/src/index.ts"
+      ],
+      "@webapplication-demo/reminder/domain": [
+        "libs/reminder/domain/src/index.ts"
+      ],
+      "@webapplication-demo/reminder/feature-create": [
+        "libs/reminder/feature-create/src/index.ts"
+      ],
+      "@webapplication-demo/reminder/feature-edit": [
+        "libs/reminder/feature-edit/src/index.ts"
+      ],
+      "@webapplication-demo/reminder/feature-list": [
+        "libs/reminder/feature-list/src/index.ts"
+      ],
       "@webapplication-demo/shared/util-store": [
         "libs/shared/util-store/src/index.ts"
+      ],
+      "@webapplication-demo/todo/domain": ["libs/todo/domain/src/index.ts"],
+      "@webapplication-demo/todo/feature-create": [
+        "libs/todo/feature-create/src/index.ts"
+      ],
+      "@webapplication-demo/todo/feature-edit": [
+        "libs/todo/feature-edit/src/index.ts"
+      ],
+      "@webapplication-demo/todo/feature-list": [
+        "libs/todo/feature-list/src/index.ts"
       ]
     }
   },

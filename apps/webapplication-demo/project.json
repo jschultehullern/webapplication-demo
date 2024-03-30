@@ -20,7 +20,10 @@
           "apps/webapplication-demo/src/favicon.ico",
           "apps/webapplication-demo/src/assets"
         ],
-        "styles": ["apps/webapplication-demo/src/styles.scss"],
+        "styles": [
+          "apps/webapplication-demo/src/styles.scss",
+          "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+        ],
         "scripts": []
       },
       "configurations": {

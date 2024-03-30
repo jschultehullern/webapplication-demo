@@ -1,1 +1,18 @@
-<h1>navigation-header</h1>
+<nav
+  mat-tab-nav-bar
+  backgroundColor="primary"
+  [tabPanel]="tabPanel"
+  data-automation-id="header-navigation"
+>
+  @for (link of links(); track link; let index = $index) {
+  <a
+    mat-tab-link
+    [attr.data-automation-id]="'header-navigation-link-' + index"
+    [active]="link === activeLink()"
+    (click)="activeLink.set(link)"
+    [routerLink]="link.route"
+    >{{ link.translationId }}</a
+  >
+  }
+</nav>
+<mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>

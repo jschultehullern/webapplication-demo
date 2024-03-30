@@ -1,16 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  effect,
+  input,
+  signal,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderFacade } from '@webapplication-demo/navigation/domain';
+import { MatTabLink, MatTabNav, MatTabNavPanel } from '@angular/material/tabs';
+import { RouterLink } from '@angular/router';
+
+export type Link = {
+  translationId: string;
+  route: string;
+};
 
 @Component({
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatTabNav, MatTabLink, RouterLink, MatTabNavPanel],
   selector: 'navigation-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent implements OnInit {
-  constructor(private headerFacade: HeaderFacade) {}
+export class HeaderComponent {
+  links = input.required<Link[]>();
+  activeLink = signal<Link | undefined>(undefined);
 
-  ngOnInit() {}
+  setLinks = effect(() => this.activeLink.set(this.links()[0]), {
+    allowSignalWrites: true,
+  });
 }
